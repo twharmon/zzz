@@ -59,7 +59,6 @@ func (c *Config) Exec() error {
 		readerCloser := io.NopCloser(reader)
 		req.Body = readerCloser
 		req.Header.Set("Content-Type", "application/json")
-		fmt.Println("set body to ", string(b))
 	}
 	fmt.Println("Making http request...")
 	start := time.Now()
